@@ -47,6 +47,12 @@ npx skills@latest add al-hub/worktree-context -g \
   --agent codex claude-code antigravity antigravity-cli --yes
 ```
 
+> **현재 `skills` CLI 주의사항**
+> `skills@1.5.21` 계열에는 Codex/Antigravity 같은 일부 universal agent의 global 설치가
+> agent별 global skills 경로 대신 `~/.agents/skills`에만 설치되는 upstream 이슈가 보고되어 있습니다.
+> 설치 후 해당 CLI에서 skill이 보이지 않으면 `npx skills@latest list -g`로 설치 상태를 확인하고,
+> upstream 수정 전까지는 해당 agent의 global skills 경로에 연결이 필요한지 확인하세요.
+
 ## 삭제
 
 간단히:
